@@ -106,7 +106,7 @@ def main():
                         answer_list.append('Yes')
                 if not found:
                     answer_list.append('No')
-        if ans_type(question) == 'Wh':
+        elif ans_type(question) == 'Wh':
             #Do something depending on what type of question it is
             wh_root = determine_wh(question)
             
@@ -132,6 +132,8 @@ def main():
                 answer_list.append('Where in the world is Carmen San Diego?')
             elif wh_root == 'who':
                 answer_list.append('Subra Suresh.')
+        else:
+            answer_list.append('Unknown question type')
     for answer in answer_list:
         print(answer)      
 
